@@ -18,6 +18,7 @@ def show_tags():
     #embed()
     # Note tags=Tag.all() ... another way to pass var to a Jinja2 template
     return render_template('index.html', tags=Tag.all())
+    # return "<h1>The Ultimate Tag Manager</h1><h1>Hello World!!!!!</h1><img src=\"%s\" style=\"width:300px\"><div>%s</div><div>%s</div>" % (cfg['awesome_image'],tags_html, form_html)
 
 @app.route('/tags', methods=['POST'])
 def add_tag():
